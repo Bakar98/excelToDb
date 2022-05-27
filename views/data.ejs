@@ -1,0 +1,16 @@
+
+
+<table>
+    <tr>
+       <% keys.forEach((key)=>{ %>
+            <th><%=key%></th>
+        <% }) %>
+    </tr>
+    <% data.forEach((d)=>{ %>
+        <tr>
+            <td>
+                <%=d%>
+            </td>       
+        </tr>
+    <% } )%>
+</table>

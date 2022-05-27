@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Excel to DB</title>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h2>Add From Excel</h2>
+    </div>
+      <h3>Add Candidates to Database</h3>
+    <div id="inputCont">
+      <% if(status){ %>        
+        <p><%=status%></p>
+        <button onclick="showData()">View Saved Data</button>
+        <%} else {%>
+        <form method="post" action="/uploadondb" enctype="multipart/form-data">
+          <input id="inputFile" onchange="check()" required name="excelfile" type="file" accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'/><br>
+          <input style="display:none" id="btn" type="submit" value="Upload"/>
+        </form>
+      <%}%>
+    </div>
+  <div>
+      
+</body>
+  <script src="script.js"></script>
+</html>
